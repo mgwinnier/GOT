@@ -6,106 +6,89 @@ body {
     background-color: #f0f0f0;
 }
 
-/* Navigation Bar Enhancements */
+/* Base Styles for the Navbar */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0.5rem 2rem;
     background-color: black;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
 }
 
+.navbar a.logo img {
+    height: auto;
+    width: 100px; /* Adjust based on your logo */
+}
+
+/* Hamburger Menu Button - Hidden by default, shown in mobile view */
 .nav-toggle {
     display: none;
-    background: none;
-    border: none;
     cursor: pointer;
+    background-color: transparent;
+    border: none;
+    outline: none;
 }
 
-.hamburger, .hamburger::before, .hamburger::after {
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+    content: '';
     display: block;
     background-color: #fff;
     height: 2px;
     width: 25px;
-    border-radius: 10px;
+    margin: 5px 0;
     transition: all 0.3s ease-in-out;
 }
 
-.hamburger::before, .hamburger::after {
-    content: "";
-    position: relative;
-}
-
-.hamburger::before {
-    transform: translateY(-8px);
-}
-
-.hamburger::after {
-    transform: translateY(6px);
-}
-
+/* Navigation Links - Horizontal layout for desktop */
 .nav-links {
-    list-style-type: none;
+    list-style: none;
+    display: flex;
     margin: 0;
     padding: 0;
-    display: flex;
-    transition: transform 0.3s ease-in-out;
-}
-
-.nav-links li {
-    margin: 0 15px;
 }
 
 .nav-links li a {
-    color: #f0f0f0;
-    padding: 10px 15px;
+    color: #fff;
     text-decoration: none;
-    transition: color 0.3s ease, background-color 0.3s ease;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s ease-in-out;
 }
 
-.nav-links li a:hover, .nav-links li a:focus {
-    color: #ffd700;
-    background-color: rgba(255, 255, 255, 0.2);
-    border-radius: 5px;
+.nav-links li a:hover,
+.nav-links li a:focus {
+    color: #ffd700; /* Gold hover effect */
 }
 
-/* Logo Size and Alignment */
-.navbar a.logo img {
-    width: 120px;
-    height: auto;
-    transition: transform 0.3s ease;
-}
-
-.navbar a.logo img:hover {
-    transform: scale(1.1);
-}
-
-/* Responsive Navigation */
+/* Mobile Navigation Styles */
 @media (max-width: 768px) {
-    .nav-links {
-        position: absolute;
-        right: 0;
-        top: 60px;
-        background-color: black;
-        width: 100%;
-        transform: translateY(-100%);
-        flex-direction: column;
-        text-align: center;
-        display: none; /* Initially hidden */
-    }
-
-    .nav-links.nav-active {
-        display: flex; /* Show navigation */
-        transform: translateY(0);
-    }
-
-    .nav-links li a {
-        color: white;
-    }
-
+    /* Display the hamburger icon */
     .nav-toggle {
         display: block;
+    }
+
+    /* Hide navigation links */
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: black;
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Show navigation links when nav-active class is added via JS */
+    .nav-links.nav-active {
+        display: flex;
+    }
+
+    /* Adjust link padding for touch targets */
+    .nav-links li a {
+        padding: 0.75rem;
     }
 }
 

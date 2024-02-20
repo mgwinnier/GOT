@@ -8,21 +8,23 @@
 </head>
 <body>    
     <header>
-        <nav class="navbar">
-            <a href="#home" class="logo">
-                <img src="logo.png" alt="Gramps of Tennessee Logo">
-            </a>
-            <button class="nav-toggle" aria-label="toggle navigation">
-                <span class="hamburger"></span>
-            </button>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#about">Who We Are</a></li>
-                <li><a href="#veterans">Veterans</a></li>
-                <li><a href="#contact">Contact Us</a></li>
-            </ul>
-        </nav>
+       <!-- Navigation Bar -->
+<nav class="navbar">
+    <a href="#home" class="logo">
+        <img src="logo.png" alt="Gramps of Tennessee Logo">
+    </a>
+    <button class="nav-toggle" aria-label="toggle navigation">
+        <span class="hamburger"></span>
+    </button>
+    <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">Who We Are</a></li>
+        <li><a href="#veterans">Veterans</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+    </ul>
+</nav>
+
     </header>
     <section id="hero">
         <div class="hero-content">
@@ -96,14 +98,14 @@
         <p>&copy; 2024 Gramps of Tennessee. All rights reserved.</p>
     </footer>
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', () => {
             const navToggle = document.querySelector('.nav-toggle');
             const navLinks = document.querySelector('.nav-links');
-            
+        
             navToggle.addEventListener('click', () => {
                 navLinks.classList.toggle('nav-active');
             });
         });
-    </script>
+        </script>        
 </body>
 </html>
