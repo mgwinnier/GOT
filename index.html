@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gramps of Tennessee</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>    
+    <header>
+        <nav class="navbar">
+            <a href="#home" class="logo">
+                <img src="logo.png" alt="Gramps of Tennessee Logo">
+            </a>
+            <button class="nav-toggle" aria-label="toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">Who We Are</a></li>
+                <li><a href="#veterans">Veterans</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="hero">
+        <div class="hero-content">
+            <h1>Empowering Seniors to Live Independently</h1>
+            <a href="#about" class="learn-more-btn">Learn More</a>
+        </div>
+    </section>
+    <section id="services" style="background-color: white;">
+        <h2 class="services-header">Services</h2>
+        <div class="services-container">
+            <div class="service-item" onclick="location.href='#services-page-transportation';">
+                <img src="transportation.jpg" alt="Transportation">
+                <p>Transportation</p>
+            </div>
+            <div class="service-item" onclick="location.href='#services-page-meal';">
+                <img src="meal-preparation.jpg" alt="Meal Preparation">
+                <p>Meal Preparation</p>
+            </div>
+            <div class="service-item" onclick="location.href='#services-page-medication';">
+                <img src="medication-reminders.jpg" alt="Medication Reminders">
+                <p>Medication Reminders</p>
+            </div>
+            <div class="service-item" onclick="location.href='#services-page-homecare';">
+                <img src="home-care.jpg" alt="Home Care">
+                <p>Home Care</p>
+            </div>
+        </div>
+        <div class="services-button-container">
+            <a href="#services-page" class="services-learn-more-btn">Learn More About Our Services</a>
+        </div>
+    </section>
+    <section id="about-us" style="background-color: #C0C0C0;">
+        <div class="container about-flex-container">
+            <div class="about-content">
+                <h2 class="section-header">Our Mission</h2>
+                <p>At Gramps of TN, our core commitment is to enhance the quality of life for senior citizens through comprehensive support and services. We believe in fostering an environment that promotes independence, health, and happiness. Our mission extends beyond basic care; we aim to be a beacon of innovation in senior living, constantly adapting and evolving to meet the diverse needs of our community.</p>
+                
+                <h2 class="team-header">Our Team</h2>
+                <p>Behind every service at Gramps of TN is a team of dedicated professionals. From healthcare specialists and caregivers to support staff and volunteers, each member brings expertise and empathy to their role. United by a shared vision, our team works tirelessly to create meaningful experiences for our seniors, ensuring they receive the respect, dignity, and quality of life they deserve.</p>
+                
+                <p>Our leadership team brings decades of experience in healthcare and senior services, guiding Gramps of TN towards excellence and innovation. With a focus on continuous improvement, we actively seek out new ways to enrich our services and adapt to the changing needs of the elderly population.</p>
+                
+                <a href="#about-page" class="about-page-btn">Learn More About Us</a>
+            </div>
+            <img src="about.jpg" alt="About Us Image" class="about-image">
+        </div>
+    </section>
+    <section id="veterans" style="background-color: white;">
+        <div class="container veterans-flex-container">
+            <div class="veterans-content">
+                <h2 class="section-header">Supporting Our Veterans</h2>
+                <p>At Gramps of TN, we recognize and deeply appreciate the sacrifices made by our veterans. Our commitment extends to ensuring that veterans receive the utmost care and support through our services. We specialize in providing tailored care solutions for veterans, ensuring they have access to the highest quality of life possible.</p>
+                
+                <p>We are proud to offer specialized services and discounts for veterans as a token of our gratitude for their service. Our team is knowledgeable about the unique needs of veterans and is dedicated to providing personalized care and support to meet those needs.</p>
+                
+                <p>Our appreciation for what veterans have done for us and our country is immense. It's our honor to give back by ensuring they receive the care, respect, and dignity they deserve.</p>
+                
+                <a href="#veterans-page" class="veterans-page-btn">Learn More About Veterans Support</a>
+            </div>
+            <img src="veterans.jpg" alt="Veterans Support Image" class="veterans-image">
+        </div>
+    </section>    
+    <section id="contact-us">
+        <div class="container contact-container">
+            <h2>Contact Us</h2>
+            <p>For more information about our services or to get in touch, click below.</p>
+            <a href="#contact" class="contact-btn">Contact Us</a>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2024 Gramps of Tennessee. All rights reserved.</p>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const navToggle = document.querySelector('.nav-toggle');
+            const navLinks = document.querySelector('.nav-links');
+            
+            navToggle.addEventListener('click', () => {
+                navLinks.classList.toggle('nav-active');
+            });
+        });
+    </script>
+</body>
+</html>
