@@ -16,10 +16,19 @@ body {
     position: relative;
 }
 
+/* Logo Size and Alignment */
 .navbar a.logo img {
-    height: auto;
-    width: 100px; /* Adjust based on your logo */
+    height: auto; /* Maintain aspect ratio */
+    width: 100px; /* Default width for larger screens */
+    transition: transform 0.3s ease; /* Smooth scaling transition */
 }
+
+@media (max-width: 768px) {
+    .navbar a.logo img {
+        width: 80px; /* Smaller width for mobile devices */
+    }
+}
+
 
 /* Hamburger Menu Button - Hidden by default, shown in mobile view */
 .nav-toggle {
@@ -44,22 +53,21 @@ body {
 
 /* Navigation Links - Horizontal layout for desktop */
 .nav-links {
-    list-style: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%; /* Adjust based on your navbar's height */
+    left: 0;
+    width: 100%;
+    background-color: black;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    max-height: 0; /* Prevents links from being clickable when hidden */
+}
+
+/* Toggle visibility with .nav-active */
+.nav-links.nav-active {
+    max-height: 250px; /* Adjust based on the total height of your links */
     display: flex;
-    margin: 0;
-    padding: 0;
-}
-
-.nav-links li a {
-    color: #fff;
-    text-decoration: none;
-    padding: 0.5rem 1rem;
-    transition: color 0.3s ease-in-out;
-}
-
-.nav-links li a:hover,
-.nav-links li a:focus {
-    color: #ffd700; /* Gold hover effect */
 }
 
 /* Mobile Navigation Styles */
