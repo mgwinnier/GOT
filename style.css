@@ -378,35 +378,6 @@ footer {
 }
 
 @media (max-width: 768px) {
-    .nav-toggle {
-        display: block;
-    }
-
-    .nav-links {
-        position: absolute;
-        right: 0;
-        top: 60px;
-        background-color: black;
-        width: 100%;
-        transform: translateY(-100%);
-        flex-direction: column;
-        text-align: center;
-        display: none;
-    }
-
-    .nav-links.nav-active {
-        display: flex;
-        transform: translateY(0);
-    }
-
-    .nav-links li {
-        margin: 15px 0;
-    }
-
-    .nav-links li a {
-        color: white;
-    }
-
     .services-container {
         grid-template-columns: 1fr; /* Stacks service items vertically on mobile */
     }
