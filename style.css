@@ -1,4 +1,5 @@
 /* Base Styles */
+/* Base Styles */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
@@ -6,37 +7,24 @@ body {
     background-color: #f0f0f0;
 }
 
-/* Base Styles for the Navbar */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0.5rem 2rem;
     background-color: black;
-    position: relative;
 }
 
-/* Logo Size and Alignment */
 .navbar a.logo img {
-    height: auto; /* Maintain aspect ratio */
-    width: 100px; /* Default width for larger screens */
-    transition: transform 0.3s ease; /* Smooth scaling transition */
+    height: auto;
+    width: 100px; /* Adjust based on your logo size */
+    transition: transform 0.3s ease;
 }
 
-@media (max-width: 768px) {
-    .navbar a.logo img {
-        width: 80px; /* Smaller width for mobile devices */
-    }
-}
-
-
-/* Hamburger Menu Button - Hidden by default, shown in mobile view */
+/* Hamburger Menu Button */
 .nav-toggle {
-    display: none;
+    display: none; /* Hidden by default */
     cursor: pointer;
-    background-color: transparent;
-    border: none;
-    outline: none;
 }
 
 .hamburger,
@@ -47,56 +35,53 @@ body {
     background-color: #fff;
     height: 2px;
     width: 25px;
-    margin: 5px 0;
+    margin: 6px 0;
     transition: all 0.3s ease-in-out;
 }
 
-/* Navigation Links - Horizontal layout for desktop */
+/* Navigation Links */
 .nav-links {
-    flex-direction: column;
-    position: absolute;
-    top: 100%; /* Adjust based on your navbar's height */
-    left: 0;
-    width: 100%;
-    background-color: black;
-    overflow: hidden;
-    transition: max-height 0.3s ease-out;
-    max-height: 0; /* Prevents links from being clickable when hidden */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Display flex for desktop */
 }
 
-/* Toggle visibility with .nav-active */
-.nav-links.nav-active {
-    max-height: 250px; /* Adjust based on the total height of your links */
-    display: flex;
+.nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s ease-in-out;
 }
 
-/* Mobile Navigation Styles */
+.nav-links li a:hover {
+    color: #ffd700;
+}
+
+/* Responsive Styles */
 @media (max-width: 768px) {
-    /* Display the hamburger icon */
     .nav-toggle {
-        display: block;
+        display: block; /* Show hamburger menu */
     }
 
-    /* Hide navigation links */
     .nav-links {
-        display: none;
+        display: none; /* Hide links initially */
         flex-direction: column;
         position: absolute;
         top: 100%;
         left: 0;
+        right: 0;
         background-color: black;
-        width: 100%;
-        text-align: center;
+        padding-top: 1rem; /* Add some space at the top */
     }
 
-    /* Show navigation links when nav-active class is added via JS */
     .nav-links.nav-active {
-        display: flex;
+        display: flex; /* Show links when active */
     }
 
-    /* Adjust link padding for touch targets */
     .nav-links li a {
         padding: 0.75rem;
+        text-align: center; /* Center align links */
     }
 }
 
